@@ -31,14 +31,27 @@ builder.Services.AddControllers();
     };
 });*/
 
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+/*builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
         options.ExpireTimeSpan = TimeSpan.FromSeconds(30);
         //options.LoginPath = "/login";
         options.AccessDeniedPath = "/bye";
-    });
+    });*/
 
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+    options.Authority = "https://localhost:7204";
+    options.Audience = "forecasts";
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+
+    };
+});
 
 
 builder.Services.AddAuthorization();
@@ -82,7 +95,7 @@ app.MapControllers();
 
 });*/
 
-app.MapGet("/login", async context =>
+/*app.MapGet("/login", async context =>
 {
     var claims = new List<Claim> {
         new Claim(ClaimTypes.Name, "anonumouse"),
@@ -94,5 +107,5 @@ app.MapGet("/login", async context =>
 
     await context.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimPrincipal);
 });
-
+*/
 app.Run();
