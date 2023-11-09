@@ -31,6 +31,13 @@ namespace IdentityServer
                 ClientSecrets = {new Secret("secret".Sha256())},
                 AllowedScopes = { "WeatherForecast" },
                 AllowedGrantTypes = GrantTypes.ClientCredentials
+            },
+            new Client
+            {
+                ClientId = "future_client",
+                ClientSecrets = {new Secret("secret".Sha256()), new Secret(BCrypt.Net.BCrypt.HashPassword("hardSecret")) { Type = "bcrypt" } },
+                AllowedScopes = { "FutureForecast", "SomeApi" },
+                AllowedGrantTypes = GrantTypes.ClientCredentials
             }
         };
     }

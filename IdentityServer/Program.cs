@@ -5,9 +5,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddIdentityServer()
     .AddInMemoryIdentityResources(Context.IdentityResources)
-    .AddInMemoryApiResources(Context.ApiResources)
+    //.AddInMemoryApiResources(Context.ApiResources)
     .AddInMemoryApiScopes(Context.ApiScopes)
     .AddInMemoryClients(Context.Clients)
+    .AddSecretValidator<BcryptValidator>()
 
     .AddDeveloperSigningCredential(); //nie u¿ywaæ na produkcji
 

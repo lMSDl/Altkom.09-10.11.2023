@@ -46,10 +46,11 @@ builder.Services.AddAuthentication(options =>
 }).AddJwtBearer(options =>
 {
     options.Authority = "https://localhost:7204";
-    options.Audience = "forecasts";
+    //options.Audience = "forecasts"; //ApiResource
+    //options.RequireHttpsMetadata = false;
     options.TokenValidationParameters = new TokenValidationParameters
     {
-
+        ValidateAudience = false
     };
 });
 
