@@ -5,7 +5,7 @@ namespace WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [Authorize/*(Roles = "Read")*/]
+    [Authorize(Policy = "WeatherForecast")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

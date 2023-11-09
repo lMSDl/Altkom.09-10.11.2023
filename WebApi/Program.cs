@@ -55,7 +55,10 @@ builder.Services.AddAuthentication(options =>
 });
 
 
-builder.Services.AddAuthorization();
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("WeatherForecast", policy => policy.RequireClaim("scope", "WeatherForecast"));
+});
 
 var app = builder.Build();
 
