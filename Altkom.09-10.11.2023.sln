@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{25BC4653-1E7A-48A9-AF56-7E793BBC2647}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiPKCE", "WebApiPKCE\WebApiPKCE.csproj", "{4CB46532-B93F-4356-92B1-1E88A354C673}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServerPKCE", "IdentityServerPKCE\IdentityServerPKCE.csproj", "{445923CD-E28E-4403-89DF-7E363B940428}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{25BC4653-1E7A-48A9-AF56-7E793BBC2647}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25BC4653-1E7A-48A9-AF56-7E793BBC2647}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25BC4653-1E7A-48A9-AF56-7E793BBC2647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CB46532-B93F-4356-92B1-1E88A354C673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CB46532-B93F-4356-92B1-1E88A354C673}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CB46532-B93F-4356-92B1-1E88A354C673}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CB46532-B93F-4356-92B1-1E88A354C673}.Release|Any CPU.Build.0 = Release|Any CPU
+		{445923CD-E28E-4403-89DF-7E363B940428}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{445923CD-E28E-4403-89DF-7E363B940428}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{445923CD-E28E-4403-89DF-7E363B940428}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{445923CD-E28E-4403-89DF-7E363B940428}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
